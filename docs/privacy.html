@@ -1,0 +1,651 @@
+<title>GpsDash Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+  :root {
+    --paper: #F4F6F8; --card: #FFFFFF; --ink: #1A1F26; --ink-2: #4B5563; --ink-3: #7C8794;
+    --rule: #DDE3E9; --rule-2: #C4CDD6; --accent: #1565C0;
+    --flag: #2E7D32; --flag-bg: #E7F1E8; --shade: #EDF1F5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #12161B; --card: #171C23; --ink: #E7EBF0; --ink-2: #A5AEBA; --ink-3: #737E8B;
+      --rule: #262D36; --rule-2: #37404B; --accent: #64B5F6;
+      --flag: #66BB6A; --flag-bg: #14231A; --shade: #1C222A;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #12161B; --card: #171C23; --ink: #E7EBF0; --ink-2: #A5AEBA; --ink-3: #737E8B;
+    --rule: #262D36; --rule-2: #37404B; --accent: #64B5F6;
+    --flag: #66BB6A; --flag-bg: #14231A; --shade: #1C222A;
+  }
+
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    font-size: 16.5px; line-height: 1.68; margin: 0; padding: 0 24px 100px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+
+  header { padding: 60px 0 0; }
+  .kicker {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12px; letter-spacing: 0.13em; text-transform: uppercase;
+    color: var(--ink-3); margin: 0 0 16px;
+  }
+  h1 {
+    font-family: "Source Serif 4", Georgia, serif; font-weight: 600;
+    font-size: 46px; line-height: 1.1; letter-spacing: -0.012em;
+    margin: 0 0 16px; text-wrap: balance;
+  }
+  .meta {
+    font-family: "IBM Plex Mono", monospace; font-size: 12.5px;
+    color: var(--ink-3); margin: 0 0 28px;
+  }
+
+  .langbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 44px; }
+  .langbar button {
+    font-family: "IBM Plex Sans", sans-serif; font-size: 13px;
+    padding: 7px 14px; cursor: pointer; background: transparent; color: var(--ink-2);
+    border: 1px solid var(--rule-2); border-radius: 2px;
+  }
+  .langbar button[aria-pressed="true"] {
+    background: var(--ink); color: var(--paper); border-color: var(--ink);
+  }
+  .langbar button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  h2 {
+    font-family: "Source Serif 4", Georgia, serif; font-weight: 600;
+    font-size: 25px; line-height: 1.25; margin: 48px 0 4px;
+    letter-spacing: -0.006em; text-wrap: balance;
+  }
+  h2:first-of-type { margin-top: 0; }
+  p { margin: 12px 0; }
+  ul { margin: 12px 0; padding-left: 22px; }
+  li { margin: 7px 0; }
+  strong { font-weight: 600; }
+  code {
+    font-family: "IBM Plex Mono", monospace; font-size: 0.86em;
+    background: var(--shade); padding: 1.5px 5px; word-break: break-word;
+  }
+
+  .lede {
+    font-size: 18.5px; color: var(--ink-2);
+    border-left: 2px solid var(--rule-2); padding-left: 18px; margin: 0 0 8px;
+  }
+
+  .flag { background: var(--flag-bg); border: 1px solid var(--flag); padding: 16px 18px; margin: 20px 0; }
+  .flag p { margin: 0; }
+  .flag .tag {
+    font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--flag); display: block; margin-bottom: 6px;
+  }
+
+  .tablewrap { overflow-x: auto; margin: 18px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 480px; }
+  th {
+    text-align: left; font-family: "IBM Plex Mono", monospace; font-weight: 500;
+    font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-3);
+    padding: 0 14px 9px 0; border-bottom: 1px solid var(--rule-2);
+  }
+  td { padding: 12px 14px 12px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  td.host { font-family: "IBM Plex Mono", monospace; font-size: 12px; white-space: nowrap; }
+  td.host span { display: block; color: var(--ink-3); font-size: 11px; }
+
+  .fill {
+    background: var(--card); border: 1px solid var(--rule); padding: 3px 8px;
+    font-family: "IBM Plex Mono", monospace; font-size: 0.88em; color: var(--accent);
+  }
+
+  a { color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  footer {
+    margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--rule);
+    font-size: 14px; color: var(--ink-3);
+  }
+
+  @media (max-width: 620px) {
+    h1 { font-size: 34px; }
+    h2 { font-size: 21px; }
+    body { padding: 0 18px 72px; font-size: 16px; }
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <p class="kicker">GpsDash · dev.pabich.gpsdash</p>
+    <h1 id="title">Privacy Policy</h1>
+    <p class="meta" id="dateline">In force from 29 August 2026 · applies to version 0.35.0 and later</p>
+    <div class="langbar">
+      <button type="button" data-lang="en" aria-pressed="true">English</button>
+      <button type="button" data-lang="pl" aria-pressed="false">Polski</button>
+      <button type="button" data-lang="de" aria-pressed="false">Deutsch</button>
+      <button type="button" data-lang="it" aria-pressed="false">Italiano</button>
+      <button type="button" data-lang="fr" aria-pressed="false">Français</button>
+      <button type="button" data-lang="es" aria-pressed="false">Español</button>
+    </div>
+  </header>
+
+  <section id="en" lang="en">
+    <p class="lede">GpsDash has no accounts, shows no advertising, collects no usage statistics and profiles nobody. The large majority of its data never leaves your phone. This document describes exactly what does leave it, and where that goes.</p>
+
+    <div class="flag">
+      <span class="tag">The main thing to know</span>
+      <p>By default, <strong>nothing about where you are leaves your phone</strong> — apart from the map tile requests needed to draw the map at all. The two features that send your coordinates to a third party, speed limits and speed cameras, are <strong>both off until you switch them on</strong> in Settings. The table below sets out exactly what each one sends, and how often.</p>
+    </div>
+
+    <h2>Who the controller is</h2>
+    <p>The controller for personal data processed in connection with GpsDash is Jerzy Pabich, contact: <a href="mailto:j.pabich@gmail.com">j.pabich@gmail.com</a>.</p>
+    <p>The app has no server. I run no user database, and I have no access to your location or to any information about your journeys.</p>
+
+    <h2>What stays on your device</h2>
+    <p>The following is processed only locally, on the phone, and is never transmitted anywhere:</p>
+    <ul>
+      <li>GPS position, speed, heading, and the g-forces derived from your motion,</li>
+      <li>daily and trip distance, average and maximum speed,</li>
+      <li>the stretch of road just travelled (kept for about 90 seconds, in memory only),</li>
+      <li>app settings,</li>
+      <li>saved places: Home, Work and recent destinations,</li>
+      <li>the cache of downloaded speed cameras and average-speed sections.</li>
+    </ul>
+    <p>Position is read from the device's own GPS receiver. The app does not use Google's location services, nor network-based location derived from carrier databases.</p>
+
+    <h2>What is sent, and to whom</h2>
+    <p>To provide the map, navigation and warnings, the app queries five free public services run by other organisations. Each receives the data described below and is a <strong>separate controller</strong> in respect of it — I have no data processing agreement with any of them.</p>
+    <div class="tablewrap">
+      <table>
+        <tr><th>Service</th><th>What it receives</th><th>When</th></tr>
+        <tr><td class="host">OpenFreeMap<span>tiles.openfreemap.org</span></td><td>map tile requests, which reveal the area you are viewing</td><td>whenever the map is visible</td></tr>
+        <tr><td class="host">Overpass API<span>overpass-api.de<br>overpass.private.coffee</span></td><td>your coordinates</td><td>speed limits: every ~800 m (off by default)<br>cameras and sections: every ~6 km (off by default)</td></tr>
+        <tr><td class="host">Valhalla<span>valhalla1.openstreetmap.de<br>FOSSGIS e.V.</span></td><td>route start and destination, chosen language and units, the app identifier <code>gpsdash</code></td><td>when a route is calculated or recalculated</td></tr>
+        <tr><td class="host">OSRM<span>router.project-osrm.org</span></td><td>route start and destination</td><td>only as a fallback, when Valhalla does not answer</td></tr>
+        <tr><td class="host">Photon<span>photon.komoot.io<br>komoot GmbH</span></td><td>the search text you type, plus an approximate position so results are local to you</td><td>when searching for a destination</td></tr>
+      </table>
+    </div>
+    <p>None of these services receives a device identifier, an advertising identifier, a phone number, an email address, or anything else that would link a query to a particular person. Each does see the IP address the request arrives from, as with any internet connection.</p>
+    <p>Their own policies govern what they do with it: <a href="https://openfreemap.org/">OpenFreeMap</a>, <a href="https://overpass-api.de/">Overpass</a>, <a href="https://valhalla.openstreetmap.de/">Valhalla / FOSSGIS</a>, <a href="https://project-osrm.org/">OSRM</a>, <a href="https://www.komoot.com/privacy">komoot / Photon</a>.</p>
+
+    <h2>What the app does not do</h2>
+    <ul>
+      <li>requires no account and no registration,</li>
+      <li>shows no advertising and uses no advertising identifier,</li>
+      <li>contains no analytics and no crash reporting,</li>
+      <li>does not profile users or make automated decisions about them,</li>
+      <li>does not sell or share data for marketing,</li>
+      <li>keeps no history of your journeys anywhere but on your device.</li>
+    </ul>
+
+    <h2>Permissions, and why they are needed</h2>
+    <ul>
+      <li><strong>Location (precise)</strong> — the basis of the app: speed, distance, position on the map, warnings.</li>
+      <li><strong>Background location</strong> — so the instruments and navigation stay smooth on the car screen in Android Auto while the phone screen is off. Without it Android throttles GPS to a low-power state.</li>
+      <li><strong>Notifications</strong> — the persistent foreground-service notification the system requires while tracking position.</li>
+      <li><strong>Internet and network state</strong> — downloading the map, routes and limit data.</li>
+      <li><strong>Battery optimisation exemption</strong> (optional, asked once) — without it aggressive power management can reduce how often a GPS position arrives while driving.</li>
+    </ul>
+
+    <h2>Android backup</h2>
+    <p>App settings and trip statistics are included in Google's system backup, so they follow you to a new phone. <strong>Saved places — Home, Work and recent destinations — are deliberately excluded</strong> from that backup and remain on this device only.</p>
+
+    <h2>Legal basis</h2>
+    <p>Processing is carried out under Article 6(1)(b) GDPR — it is necessary to deliver the function you ask for by opening the app (map, navigation). For optional features you enable with a switch in Settings (speed cameras, speed limits, alert sounds), the basis is Article 6(1)(a), your consent, which you may withdraw at any time by turning the feature off.</p>
+
+    <h2>How long data is kept</h2>
+    <p>Data lives on your device for as long as the app is installed. Uninstalling the app, or clearing its data in system settings, removes it permanently. The enforcement cache discards entries older than 14 days automatically. I cannot restore any of it — I hold no copy.</p>
+
+    <h2>Your rights</h2>
+    <p>You have the right of access, rectification, erasure, restriction of processing, portability and objection. Because all data is held solely on your device, you exercise these yourself and immediately: by viewing it in the app, deleting saved places, resetting statistics, or clearing the app's data. You also have the right to lodge a complaint with the supervisory authority in your country of residence, or with the authority for the controller — in Poland, the President of the Personal Data Protection Office (UODO).</p>
+
+    <h2>Children</h2>
+    <p>The app is intended for drivers and is not directed at children. I do not knowingly collect data from anyone under 16.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If anything changes, this page will be updated and the date at the top revised. Material changes to what is transmitted will be described in the Google Play release notes.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy: <a href="mailto:j.pabich@gmail.com">j.pabich@gmail.com</a>.</p>
+  </section>
+
+  <section id="pl" lang="pl" hidden>
+    <p class="lede">GpsDash nie ma kont, nie wyświetla reklam, nie zbiera statystyk użycia i nikogo nie profiluje. Zdecydowana większość danych nigdy nie opuszcza telefonu. Ten dokument opisuje dokładnie to, co jednak go opuszcza — i dokąd trafia.</p>
+
+    <div class="flag">
+      <span class="tag">Najważniejsze</span>
+      <p>Domyślnie <strong>żadna informacja o tym, gdzie jesteś, nie opuszcza telefonu</strong> — poza żądaniami kafelków, bez których mapa w ogóle by się nie narysowała. Dwie funkcje, które wysyłają współrzędne podmiotowi trzeciemu — ograniczenia prędkości i fotoradary — są <strong>wyłączone, dopóki sam ich nie włączysz</strong> w Ustawieniach. Tabela poniżej pokazuje dokładnie, co i jak często wysyła każda z nich.</p>
+    </div>
+
+    <h2>Kto jest administratorem</h2>
+    <p>Administratorem danych osobowych przetwarzanych w związku z aplikacją GpsDash jest Jerzy Pabich, kontakt: <a href="mailto:j.pabich@gmail.com">j.pabich@gmail.com</a>.</p>
+    <p>Aplikacja nie posiada serwera. Nie prowadzę żadnej bazy danych użytkowników, nie mam dostępu do Twojej lokalizacji ani do żadnych informacji o Twoich przejazdach.</p>
+
+    <h2>Co zostaje na urządzeniu</h2>
+    <p>Te dane są przetwarzane wyłącznie lokalnie, w pamięci telefonu, i nie są nigdzie przesyłane:</p>
+    <ul>
+      <li>pozycja GPS, prędkość, kierunek jazdy i przeciążenia wyliczane z ruchu,</li>
+      <li>dystans dzienny i dystans przejazdu, prędkość średnia i maksymalna,</li>
+      <li>ostatnio przebyty odcinek trasy (przechowywany przez około 90 sekund, wyłącznie w pamięci operacyjnej),</li>
+      <li>ustawienia aplikacji,</li>
+      <li>zapisane miejsca: Dom, Praca oraz ostatnie cele nawigacji,</li>
+      <li>pamięć podręczna pobranych fotoradarów i odcinkowych pomiarów prędkości.</li>
+    </ul>
+    <p>Pozycja odczytywana jest z systemowego odbiornika GPS urządzenia. Aplikacja nie korzysta z usług lokalizacyjnych Google ani z lokalizacji sieciowej opartej o bazy operatorów.</p>
+
+    <h2>Co jest wysyłane i do kogo</h2>
+    <p>Aby działały mapa, nawigacja i ostrzeżenia, aplikacja odpytuje pięć bezpłatnych, publicznych serwisów prowadzonych przez inne podmioty. Każdy z nich otrzymuje dane opisane niżej i jest wobec nich <strong>odrębnym administratorem</strong> — nie łączy mnie z nimi żadna umowa powierzenia przetwarzania.</p>
+    <div class="tablewrap">
+      <table>
+        <tr><th>Serwis</th><th>Co otrzymuje</th><th>Kiedy</th></tr>
+        <tr><td class="host">OpenFreeMap<span>tiles.openfreemap.org</span></td><td>żądania kafelków mapy, które ujawniają oglądany obszar</td><td>gdy mapa jest widoczna</td></tr>
+        <tr><td class="host">Overpass API<span>overpass-api.de<br>overpass.private.coffee</span></td><td>Twoje współrzędne</td><td>ograniczenia prędkości: co ~800 m (domyślnie wyłączone)<br>fotoradary i odcinki: co ~6 km (domyślnie wyłączone)</td></tr>
+        <tr><td class="host">Valhalla<span>valhalla1.openstreetmap.de<br>FOSSGIS e.V.</span></td><td>punkt początkowy i cel trasy, wybrany język i jednostki, identyfikator aplikacji <code>gpsdash</code></td><td>przy wyznaczaniu i przeliczaniu trasy</td></tr>
+        <tr><td class="host">OSRM<span>router.project-osrm.org</span></td><td>punkt początkowy i cel trasy</td><td>tylko awaryjnie, gdy Valhalla nie odpowie</td></tr>
+        <tr><td class="host">Photon<span>photon.komoot.io<br>komoot GmbH</span></td><td>wpisany tekst wyszukiwania oraz przybliżona pozycja, aby wyniki dotyczyły okolicy</td><td>przy wyszukiwaniu celu</td></tr>
+      </table>
+    </div>
+    <p>Do żadnego z tych serwisów nie są przekazywane: identyfikator urządzenia, identyfikator reklamowy, numer telefonu, adres e-mail ani jakiekolwiek dane pozwalające powiązać zapytanie z konkretną osobą. Każdy z nich widzi natomiast adres IP, z którego przychodzi zapytanie — jak przy każdym połączeniu internetowym.</p>
+    <p>Zasady tych serwisów opisują ich własne polityki: <a href="https://openfreemap.org/">OpenFreeMap</a>, <a href="https://overpass-api.de/">Overpass</a>, <a href="https://valhalla.openstreetmap.de/">Valhalla / FOSSGIS</a>, <a href="https://project-osrm.org/">OSRM</a>, <a href="https://www.komoot.com/privacy">komoot / Photon</a>.</p>
+
+    <h2>Czego aplikacja nie robi</h2>
+    <ul>
+      <li>nie wymaga konta ani rejestracji,</li>
+      <li>nie wyświetla reklam i nie korzysta z identyfikatora reklamowego,</li>
+      <li>nie zawiera narzędzi analitycznych ani zbierania danych o awariach,</li>
+      <li>nie profiluje użytkowników i nie podejmuje decyzji w sposób zautomatyzowany,</li>
+      <li>nie sprzedaje ani nie udostępnia danych w celach marketingowych,</li>
+      <li>nie przechowuje historii Twoich tras poza urządzeniem.</li>
+    </ul>
+
+    <h2>Uprawnienia i po co są potrzebne</h2>
+    <ul>
+      <li><strong>Lokalizacja (dokładna)</strong> — podstawa działania: prędkość, dystans, pozycja na mapie, ostrzeżenia.</li>
+      <li><strong>Lokalizacja w tle</strong> — aby zegary i nawigacja działały płynnie na ekranie samochodu w Android Auto przy wygaszonym ekranie telefonu. Bez tego Android ogranicza GPS do trybu energooszczędnego.</li>
+      <li><strong>Powiadomienia</strong> — stałe powiadomienie usługi pierwszoplanowej, wymagane przez system podczas śledzenia pozycji.</li>
+      <li><strong>Internet i stan sieci</strong> — pobieranie mapy, tras i danych o ograniczeniach.</li>
+      <li><strong>Wyłączenie optymalizacji baterii</strong> (opcjonalne, pytane raz) — bez tego agresywne oszczędzanie energii potrafi ograniczyć częstotliwość pozycji GPS podczas jazdy.</li>
+    </ul>
+
+    <h2>Kopia zapasowa Android</h2>
+    <p>Ustawienia aplikacji i statystyki przejazdów objęte są systemową kopią zapasową Google, dzięki czemu przenoszą się na nowy telefon. <strong>Zapisane miejsca — Dom, Praca i ostatnie cele — są z kopii celowo wyłączone</strong> i pozostają wyłącznie na tym urządzeniu.</p>
+
+    <h2>Podstawa prawna</h2>
+    <p>Przetwarzanie odbywa się na podstawie art. 6 ust. 1 lit. b RODO — jest niezbędne do dostarczenia funkcji, o którą prosisz, uruchamiając aplikację (mapa, nawigacja). W przypadku funkcji opcjonalnych, które włączasz przełącznikiem w Ustawieniach (fotoradary, ograniczenia prędkości, dźwięki ostrzeżeń), podstawą jest art. 6 ust. 1 lit. a — Twoja zgoda, którą możesz w każdej chwili wycofać, wyłączając daną funkcję.</p>
+
+    <h2>Jak długo dane są przechowywane</h2>
+    <p>Dane żyją na Twoim urządzeniu tak długo, jak zainstalowana jest aplikacja. Odinstalowanie aplikacji lub wyczyszczenie jej danych w ustawieniach systemu usuwa je bezpowrotnie. Pamięć podręczna fotoradarów usuwa wpisy starsze niż 14 dni automatycznie. Nie mam możliwości odtworzenia żadnych z tych danych — nie posiadam ich kopii.</p>
+
+    <h2>Twoje prawa</h2>
+    <p>Przysługuje Ci prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia oraz sprzeciwu. Ponieważ wszystkie dane znajdują się wyłącznie na Twoim urządzeniu, prawa te realizujesz samodzielnie i natychmiast: przeglądając je w aplikacji, usuwając zapisane miejsca, resetując statystyki lub czyszcząc dane aplikacji. Masz również prawo wniesienia skargi do organu nadzorczego w kraju swojego zamieszkania lub do organu właściwego dla administratora — w Polsce jest to Prezes Urzędu Ochrony Danych Osobowych.</p>
+
+    <h2>Dzieci</h2>
+    <p>Aplikacja jest przeznaczona dla kierowców i nie jest kierowana do dzieci. Nie zbieram świadomie danych osób poniżej 16. roku życia.</p>
+
+    <h2>Zmiany polityki</h2>
+    <p>W razie zmian ta strona zostanie zaktualizowana, a data u góry — zmieniona. Istotne zmiany dotyczące zakresu przekazywanych danych zostaną opisane w opisie aktualizacji w Google Play.</p>
+
+    <h2>Kontakt</h2>
+    <p>Pytania dotyczące tej polityki: <a href="mailto:j.pabich@gmail.com">j.pabich@gmail.com</a>.</p>
+  </section>
+
+  <section id="de" lang="de" hidden>
+    <p class="lede">GpsDash hat keine Konten, zeigt keine Werbung, erhebt keine Nutzungsstatistiken und erstellt von niemandem ein Profil. Der weitaus größte Teil der Daten verlässt dein Telefon nie. Dieses Dokument beschreibt genau das, was es doch verlässt — und wohin es geht.</p>
+
+    <div class="flag">
+      <span class="tag">Das Wichtigste</span>
+      <p>Standardmäßig <strong>verlässt keine Information darüber, wo du bist, dein Telefon</strong> — abgesehen von den Kachelanfragen, ohne die sich die Karte gar nicht zeichnen ließe. Die beiden Funktionen, die deine Koordinaten an Dritte senden — Tempolimits und Blitzer — sind <strong>aus, bis du sie einschaltest</strong>. Die Tabelle unten zeigt genau, was jede von ihnen sendet und wie oft.</p>
+    </div>
+
+    <h2>Wer Verantwortlicher ist</h2>
+    <p>Verantwortlicher für die im Zusammenhang mit GpsDash verarbeiteten personenbezogenen Daten ist Jerzy Pabich, Kontakt: <a href="mailto:j.pabich@gmail.com">j.pabich@gmail.com</a>.</p>
+    <p>Die App hat keinen Server. Ich betreibe keine Nutzerdatenbank und habe keinen Zugriff auf deinen Standort oder auf Informationen über deine Fahrten.</p>
+
+    <h2>Was auf dem Gerät bleibt</h2>
+    <p>Das Folgende wird ausschließlich lokal auf dem Telefon verarbeitet und niemals irgendwohin übertragen:</p>
+    <ul>
+      <li>GPS-Position, Geschwindigkeit, Fahrtrichtung und die aus der Bewegung berechneten Beschleunigungswerte,</li>
+      <li>Tages- und Fahrtstrecke, Durchschnitts- und Höchstgeschwindigkeit,</li>
+      <li>die zuletzt gefahrene Strecke (etwa 90 Sekunden, nur im Arbeitsspeicher),</li>
+      <li>App-Einstellungen,</li>
+      <li>gespeicherte Orte: Zuhause, Arbeit und zuletzt genutzte Ziele,</li>
+      <li>der Zwischenspeicher geladener Blitzer und Abschnittskontrollen.</li>
+    </ul>
+    <p>Die Position wird vom GPS-Empfänger des Geräts selbst gelesen. Die App nutzt weder Googles Ortungsdienste noch eine netzbasierte Ortung aus Mobilfunkdatenbanken.</p>
+
+    <h2>Was gesendet wird — und an wen</h2>
+    <p>Für Karte, Navigation und Warnungen fragt die App fünf kostenlose öffentliche Dienste ab, die von anderen Organisationen betrieben werden. Jeder erhält die unten beschriebenen Daten und ist dafür ein <strong>eigenständiger Verantwortlicher</strong> — mit keinem von ihnen besteht ein Auftragsverarbeitungsvertrag.</p>
+    <div class="tablewrap">
+      <table>
+        <tr><th>Dienst</th><th>Was er erhält</th><th>Wann</th></tr>
+        <tr><td class="host">OpenFreeMap<span>tiles.openfreemap.org</span></td><td>Anfragen nach Kartenkacheln, die den betrachteten Bereich erkennen lassen</td><td>solange die Karte sichtbar ist</td></tr>
+        <tr><td class="host">Overpass API<span>overpass-api.de<br>overpass.private.coffee</span></td><td>deine Koordinaten</td><td>Tempolimits: alle ~800 m (standardmäßig aus)<br>Blitzer und Abschnitte: alle ~6 km (standardmäßig aus)</td></tr>
+        <tr><td class="host">Valhalla<span>valhalla1.openstreetmap.de<br>FOSSGIS e.V.</span></td><td>Start und Ziel der Route, gewählte Sprache und Einheiten, die App-Kennung <code>gpsdash</code></td><td>bei der Berechnung und Neuberechnung einer Route</td></tr>
+        <tr><td class="host">OSRM<span>router.project-osrm.org</span></td><td>Start und Ziel der Route</td><td>nur ersatzweise, wenn Valhalla nicht antwortet</td></tr>
+        <tr><td class="host">Photon<span>photon.komoot.io<br>komoot GmbH</span></td><td>der eingegebene Suchtext sowie eine ungefähre Position, damit die Treffer aus der Umgebung stammen</td><td>bei der Zielsuche</td></tr>
+      </table>
+    </div>
+    <p>Keiner dieser Dienste erhält eine Gerätekennung, eine Werbe-ID, eine Telefonnummer, eine E-Mail-Adresse oder sonst etwas, das eine Anfrage einer bestimmten Person zuordnen würde. Jeder sieht allerdings die IP-Adresse, von der die Anfrage kommt — wie bei jeder Internetverbindung.</p>
+    <p>Was damit geschieht, regeln deren eigene Datenschutzerklärungen: <a href="https://openfreemap.org/">OpenFreeMap</a>, <a href="https://overpass-api.de/">Overpass</a>, <a href="https://valhalla.openstreetmap.de/">Valhalla / FOSSGIS</a>, <a href="https://project-osrm.org/">OSRM</a>, <a href="https://www.komoot.com/privacy">komoot / Photon</a>.</p>
+
+    <h2>Was die App nicht tut</h2>
+    <ul>
+      <li>verlangt kein Konto und keine Registrierung,</li>
+      <li>zeigt keine Werbung und nutzt keine Werbe-ID,</li>
+      <li>enthält keine Analyse- und keine Absturzberichts-Werkzeuge,</li>
+      <li>erstellt keine Profile und trifft keine automatisierten Entscheidungen,</li>
+      <li>verkauft oder teilt keine Daten zu Marketingzwecken,</li>
+      <li>bewahrt keinen Verlauf deiner Fahrten außerhalb deines Geräts auf.</li>
+    </ul>
+
+    <h2>Berechtigungen und wozu sie dienen</h2>
+    <ul>
+      <li><strong>Standort (genau)</strong> — die Grundlage der App: Geschwindigkeit, Strecke, Position auf der Karte, Warnungen.</li>
+      <li><strong>Standort im Hintergrund</strong> — damit Instrumente und Navigation auf dem Autobildschirm in Android Auto flüssig bleiben, während der Telefonbildschirm aus ist. Ohne sie drosselt Android das GPS in einen Stromsparzustand.</li>
+      <li><strong>Benachrichtigungen</strong> — die dauerhafte Benachrichtigung des Vordergrunddienstes, die das System bei laufender Standortverfolgung verlangt.</li>
+      <li><strong>Internet und Netzwerkstatus</strong> — Laden von Karte, Routen und Limitdaten.</li>
+      <li><strong>Ausnahme von der Akkuoptimierung</strong> (optional, einmalig gefragt) — ohne sie kann aggressives Energiemanagement die Häufigkeit der GPS-Positionen während der Fahrt verringern.</li>
+    </ul>
+
+    <h2>Android-Sicherung</h2>
+    <p>App-Einstellungen und Fahrtstatistiken sind in Googles Systemsicherung enthalten und wandern so auf ein neues Telefon mit. <strong>Gespeicherte Orte — Zuhause, Arbeit und zuletzt genutzte Ziele — sind bewusst ausgenommen</strong> und bleiben nur auf diesem Gerät.</p>
+
+    <h2>Rechtsgrundlage</h2>
+    <p>Die Verarbeitung erfolgt nach Art. 6 Abs. 1 lit. b DSGVO — sie ist erforderlich, um die Funktion zu erbringen, die du mit dem Öffnen der App anforderst (Karte, Navigation). Für optionale Funktionen, die du in den Einstellungen per Schalter aktivierst (Blitzer, Tempolimits, Warntöne), ist die Grundlage Art. 6 Abs. 1 lit. a, deine Einwilligung, die du jederzeit durch Abschalten der Funktion widerrufen kannst.</p>
+
+    <h2>Wie lange Daten aufbewahrt werden</h2>
+    <p>Die Daten bleiben auf deinem Gerät, solange die App installiert ist. Deinstallieren oder das Löschen der App-Daten in den Systemeinstellungen entfernt sie endgültig. Der Blitzer-Zwischenspeicher verwirft Einträge automatisch nach 14 Tagen. Ich kann nichts davon wiederherstellen — ich besitze keine Kopie.</p>
+
+    <h2>Deine Rechte</h2>
+    <p>Dir stehen Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch zu. Da sämtliche Daten ausschließlich auf deinem Gerät liegen, übst du diese Rechte selbst und unmittelbar aus: indem du sie in der App ansiehst, gespeicherte Orte löschst, Statistiken zurücksetzt oder die App-Daten löschst. Außerdem hast du das Recht, dich bei der Aufsichtsbehörde deines Wohnsitzlandes oder bei der für den Verantwortlichen zuständigen Behörde zu beschweren — in Polen ist das der Präsident des Amtes für den Schutz personenbezogener Daten (UODO).</p>
+
+    <h2>Kinder</h2>
+    <p>Die App richtet sich an Fahrerinnen und Fahrer und nicht an Kinder. Ich erhebe wissentlich keine Daten von Personen unter 16 Jahren.</p>
+
+    <h2>Änderungen dieser Erklärung</h2>
+    <p>Bei Änderungen wird diese Seite aktualisiert und das Datum oben angepasst. Wesentliche Änderungen daran, was übermittelt wird, werden in den Google-Play-Versionshinweisen beschrieben.</p>
+
+    <h2>Kontakt</h2>
+    <p>Fragen zu dieser Erklärung: <a href="mailto:j.pabich@gmail.com">j.pabich@gmail.com</a>.</p>
+  </section>
+
+  <section id="it" lang="it" hidden>
+    <p class="lede">GpsDash non ha account, non mostra pubblicità, non raccoglie statistiche d'uso e non profila nessuno. La grande maggioranza dei dati non lascia mai il telefono. Questo documento descrive esattamente ciò che invece lo lascia — e dove va a finire.</p>
+
+    <div class="flag">
+      <span class="tag">La cosa più importante</span>
+      <p>Per impostazione predefinita <strong>nessuna informazione su dove ti trovi lascia il telefono</strong> — a parte le richieste di tile, senza le quali la mappa non si disegnerebbe affatto. Le due funzioni che inviano le tue coordinate a terzi — limiti di velocità e autovelox — sono <strong>entrambe disattivate finché non le attivi</strong> nelle Impostazioni. La tabella qui sotto indica esattamente che cosa invia ciascuna, e con quale frequenza.</p>
+    </div>
+
+    <h2>Chi è il titolare</h2>
+    <p>Il titolare del trattamento dei dati personali trattati in relazione a GpsDash è Jerzy Pabich, contatto: <a href="mailto:j.pabich@gmail.com">j.pabich@gmail.com</a>.</p>
+    <p>L'app non ha un server. Non gestisco alcun database di utenti e non ho accesso alla tua posizione né ad alcuna informazione sui tuoi viaggi.</p>
+
+    <h2>Che cosa resta sul dispositivo</h2>
+    <p>Quanto segue è trattato solo localmente, sul telefono, e non viene mai trasmesso da nessuna parte:</p>
+    <ul>
+      <li>posizione GPS, velocità, direzione e le accelerazioni ricavate dal movimento,</li>
+      <li>distanza giornaliera e di viaggio, velocità media e massima,</li>
+      <li>il tratto di strada appena percorso (circa 90 secondi, solo in memoria),</li>
+      <li>impostazioni dell'app,</li>
+      <li>luoghi salvati: Casa, Lavoro e destinazioni recenti,</li>
+      <li>la cache di autovelox e tratti a velocità media scaricati.</li>
+    </ul>
+    <p>La posizione è letta dal ricevitore GPS del dispositivo stesso. L'app non usa i servizi di localizzazione di Google né la localizzazione di rete basata sui database degli operatori.</p>
+
+    <h2>Che cosa viene inviato, e a chi</h2>
+    <p>Per fornire mappa, navigazione e avvisi, l'app interroga cinque servizi pubblici gratuiti gestiti da altre organizzazioni. Ciascuno riceve i dati descritti sotto ed è per essi un <strong>titolare autonomo</strong> — con nessuno di loro esiste un accordo di trattamento dei dati.</p>
+    <div class="tablewrap">
+      <table>
+        <tr><th>Servizio</th><th>Che cosa riceve</th><th>Quando</th></tr>
+        <tr><td class="host">OpenFreeMap<span>tiles.openfreemap.org</span></td><td>richieste di tile, che rivelano l'area che stai guardando</td><td>quando la mappa è visibile</td></tr>
+        <tr><td class="host">Overpass API<span>overpass-api.de<br>overpass.private.coffee</span></td><td>le tue coordinate</td><td>limiti di velocità: ogni ~800 m (disattivo di default)<br>autovelox e tratti: ogni ~6 km (disattivo di default)</td></tr>
+        <tr><td class="host">Valhalla<span>valhalla1.openstreetmap.de<br>FOSSGIS e.V.</span></td><td>partenza e destinazione del percorso, lingua e unità scelte, l'identificativo dell'app <code>gpsdash</code></td><td>al calcolo e al ricalcolo di un percorso</td></tr>
+        <tr><td class="host">OSRM<span>router.project-osrm.org</span></td><td>partenza e destinazione del percorso</td><td>solo come riserva, quando Valhalla non risponde</td></tr>
+        <tr><td class="host">Photon<span>photon.komoot.io<br>komoot GmbH</span></td><td>il testo di ricerca digitato e una posizione approssimativa, perché i risultati siano vicini a te</td><td>quando cerchi una destinazione</td></tr>
+      </table>
+    </div>
+    <p>Nessuno di questi servizi riceve un identificativo del dispositivo, un identificativo pubblicitario, un numero di telefono, un indirizzo e-mail o altro che colleghi una richiesta a una persona determinata. Ciascuno vede però l'indirizzo IP da cui arriva la richiesta, come in qualsiasi connessione a internet.</p>
+    <p>Le rispettive informative regolano ciò che ne fanno: <a href="https://openfreemap.org/">OpenFreeMap</a>, <a href="https://overpass-api.de/">Overpass</a>, <a href="https://valhalla.openstreetmap.de/">Valhalla / FOSSGIS</a>, <a href="https://project-osrm.org/">OSRM</a>, <a href="https://www.komoot.com/privacy">komoot / Photon</a>.</p>
+
+    <h2>Che cosa l'app non fa</h2>
+    <ul>
+      <li>non richiede account né registrazione,</li>
+      <li>non mostra pubblicità e non usa identificativi pubblicitari,</li>
+      <li>non contiene strumenti di analisi né di segnalazione degli arresti anomali,</li>
+      <li>non profila gli utenti e non prende decisioni automatizzate,</li>
+      <li>non vende né condivide dati per finalità di marketing,</li>
+      <li>non conserva la cronologia dei tuoi viaggi al di fuori del dispositivo.</li>
+    </ul>
+
+    <h2>Autorizzazioni e a che cosa servono</h2>
+    <ul>
+      <li><strong>Posizione (precisa)</strong> — la base dell'app: velocità, distanza, posizione sulla mappa, avvisi.</li>
+      <li><strong>Posizione in background</strong> — perché strumenti e navigazione restino fluidi sullo schermo dell'auto in Android Auto mentre lo schermo del telefono è spento. Senza, Android limita il GPS a uno stato a basso consumo.</li>
+      <li><strong>Notifiche</strong> — la notifica permanente del servizio in primo piano, richiesta dal sistema durante il tracciamento della posizione.</li>
+      <li><strong>Internet e stato della rete</strong> — scaricare mappa, percorsi e dati sui limiti.</li>
+      <li><strong>Esclusione dall'ottimizzazione della batteria</strong> (facoltativa, chiesta una volta) — senza di essa una gestione energetica aggressiva può ridurre la frequenza delle posizioni GPS durante la guida.</li>
+    </ul>
+
+    <h2>Backup di Android</h2>
+    <p>Impostazioni dell'app e statistiche di viaggio rientrano nel backup di sistema di Google e ti seguono su un telefono nuovo. <strong>I luoghi salvati — Casa, Lavoro e destinazioni recenti — ne sono deliberatamente esclusi</strong> e restano solo su questo dispositivo.</p>
+
+    <h2>Base giuridica</h2>
+    <p>Il trattamento avviene ai sensi dell'art. 6, par. 1, lett. b del GDPR: è necessario per fornire la funzione che richiedi aprendo l'app (mappa, navigazione). Per le funzioni facoltative che attivi con un interruttore nelle Impostazioni (autovelox, limiti di velocità, suoni di avviso) la base è l'art. 6, par. 1, lett. a, il tuo consenso, revocabile in qualsiasi momento disattivando la funzione.</p>
+
+    <h2>Per quanto tempo i dati sono conservati</h2>
+    <p>I dati restano sul tuo dispositivo finché l'app è installata. Disinstallarla, o cancellarne i dati nelle impostazioni di sistema, li rimuove definitivamente. La cache degli autovelox scarta automaticamente le voci più vecchie di 14 giorni. Non posso recuperarne nessuno — non ne ho copia.</p>
+
+    <h2>I tuoi diritti</h2>
+    <p>Hai diritto di accesso, rettifica, cancellazione, limitazione del trattamento, portabilità e opposizione. Poiché tutti i dati risiedono unicamente sul tuo dispositivo, eserciti questi diritti da solo e immediatamente: consultandoli nell'app, eliminando i luoghi salvati, azzerando le statistiche o cancellando i dati dell'app. Hai inoltre diritto di proporre reclamo all'autorità di controllo del tuo Paese di residenza o a quella competente per il titolare — in Polonia il Presidente dell'Ufficio per la protezione dei dati personali (UODO).</p>
+
+    <h2>Minori</h2>
+    <p>L'app è destinata a chi guida e non è rivolta ai minori. Non raccolgo consapevolmente dati di persone di età inferiore a 16 anni.</p>
+
+    <h2>Modifiche a questa informativa</h2>
+    <p>In caso di modifiche questa pagina sarà aggiornata e la data in alto rivista. Le modifiche sostanziali a ciò che viene trasmesso saranno descritte nelle note di rilascio su Google Play.</p>
+
+    <h2>Contatti</h2>
+    <p>Domande su questa informativa: <a href="mailto:j.pabich@gmail.com">j.pabich@gmail.com</a>.</p>
+  </section>
+
+  <section id="fr" lang="fr" hidden>
+    <p class="lede">GpsDash n'a pas de comptes, n'affiche aucune publicité, ne collecte aucune statistique d'usage et ne profile personne. La très grande majorité des données ne quitte jamais votre téléphone. Ce document décrit précisément ce qui le quitte — et où cela va.</p>
+
+    <div class="flag">
+      <span class="tag">L'essentiel</span>
+      <p>Par défaut, <strong>aucune information sur l'endroit où vous vous trouvez ne quitte votre téléphone</strong> — hormis les requêtes de tuiles, sans lesquelles la carte ne s'afficherait pas du tout. Les deux fonctions qui transmettent vos coordonnées à un tiers — limitations de vitesse et radars — sont <strong>désactivées tant que vous ne les activez pas</strong> dans les Paramètres. Le tableau ci-dessous précise exactement ce que chacune envoie, et à quelle fréquence.</p>
+    </div>
+
+    <h2>Qui est le responsable du traitement</h2>
+    <p>Le responsable du traitement des données personnelles traitées dans le cadre de GpsDash est Jerzy Pabich, contact : <a href="mailto:j.pabich@gmail.com">j.pabich@gmail.com</a>.</p>
+    <p>L'application n'a pas de serveur. Je ne tiens aucune base d'utilisateurs et n'ai accès ni à votre position ni à aucune information sur vos trajets.</p>
+
+    <h2>Ce qui reste sur votre appareil</h2>
+    <p>Les éléments suivants sont traités uniquement en local, sur le téléphone, et ne sont jamais transmis :</p>
+    <ul>
+      <li>position GPS, vitesse, cap et accélérations déduites du mouvement,</li>
+      <li>distance du jour et du trajet, vitesses moyenne et maximale,</li>
+      <li>le tronçon qui vient d'être parcouru (environ 90 secondes, en mémoire vive uniquement),</li>
+      <li>réglages de l'application,</li>
+      <li>lieux enregistrés : Domicile, Travail et destinations récentes,</li>
+      <li>le cache des radars et tronçons à vitesse moyenne téléchargés.</li>
+    </ul>
+    <p>La position est lue par le récepteur GPS de l'appareil lui-même. L'application n'utilise ni les services de localisation de Google, ni la localisation réseau issue des bases des opérateurs.</p>
+
+    <h2>Ce qui est envoyé, et à qui</h2>
+    <p>Pour fournir la carte, la navigation et les alertes, l'application interroge cinq services publics gratuits exploités par d'autres organisations. Chacun reçoit les données décrites ci-dessous et en est un <strong>responsable de traitement distinct</strong> — aucun contrat de sous-traitance ne me lie à eux.</p>
+    <div class="tablewrap">
+      <table>
+        <tr><th>Service</th><th>Ce qu'il reçoit</th><th>Quand</th></tr>
+        <tr><td class="host">OpenFreeMap<span>tiles.openfreemap.org</span></td><td>les requêtes de tuiles, qui révèlent la zone consultée</td><td>dès que la carte est visible</td></tr>
+        <tr><td class="host">Overpass API<span>overpass-api.de<br>overpass.private.coffee</span></td><td>vos coordonnées</td><td>limitations : tous les ~800 m (désactivé par défaut)<br>radars et tronçons : tous les ~6 km (désactivé par défaut)</td></tr>
+        <tr><td class="host">Valhalla<span>valhalla1.openstreetmap.de<br>FOSSGIS e.V.</span></td><td>départ et destination de l'itinéraire, langue et unités choisies, l'identifiant d'application <code>gpsdash</code></td><td>lors du calcul et du recalcul d'un itinéraire</td></tr>
+        <tr><td class="host">OSRM<span>router.project-osrm.org</span></td><td>départ et destination de l'itinéraire</td><td>uniquement en secours, si Valhalla ne répond pas</td></tr>
+        <tr><td class="host">Photon<span>photon.komoot.io<br>komoot GmbH</span></td><td>le texte de recherche saisi et une position approximative, pour que les résultats soient proches de vous</td><td>lors d'une recherche de destination</td></tr>
+      </table>
+    </div>
+    <p>Aucun de ces services ne reçoit d'identifiant d'appareil, d'identifiant publicitaire, de numéro de téléphone, d'adresse e-mail ni quoi que ce soit qui rattacherait une requête à une personne déterminée. Chacun voit en revanche l'adresse IP d'où provient la requête, comme pour toute connexion internet.</p>
+    <p>Leurs propres politiques régissent ce qu'ils en font : <a href="https://openfreemap.org/">OpenFreeMap</a>, <a href="https://overpass-api.de/">Overpass</a>, <a href="https://valhalla.openstreetmap.de/">Valhalla / FOSSGIS</a>, <a href="https://project-osrm.org/">OSRM</a>, <a href="https://www.komoot.com/privacy">komoot / Photon</a>.</p>
+
+    <h2>Ce que l'application ne fait pas</h2>
+    <ul>
+      <li>n'exige ni compte ni inscription,</li>
+      <li>n'affiche pas de publicité et n'utilise pas d'identifiant publicitaire,</li>
+      <li>ne contient ni outil d'analyse ni rapport de plantage,</li>
+      <li>ne profile pas les utilisateurs et ne prend aucune décision automatisée,</li>
+      <li>ne vend ni ne partage de données à des fins marketing,</li>
+      <li>ne conserve aucun historique de vos trajets ailleurs que sur votre appareil.</li>
+    </ul>
+
+    <h2>Autorisations et raisons</h2>
+    <ul>
+      <li><strong>Position (précise)</strong> — la base de l'application : vitesse, distance, position sur la carte, alertes.</li>
+      <li><strong>Position en arrière-plan</strong> — pour que les instruments et la navigation restent fluides sur l'écran de la voiture dans Android Auto pendant que l'écran du téléphone est éteint. Sans elle, Android bride le GPS en mode basse consommation.</li>
+      <li><strong>Notifications</strong> — la notification permanente du service de premier plan, exigée par le système pendant le suivi de position.</li>
+      <li><strong>Internet et état du réseau</strong> — téléchargement de la carte, des itinéraires et des limitations.</li>
+      <li><strong>Exemption d'optimisation de la batterie</strong> (facultative, demandée une fois) — sans elle, une gestion d'énergie agressive peut réduire la fréquence des positions GPS en roulant.</li>
+    </ul>
+
+    <h2>Sauvegarde Android</h2>
+    <p>Les réglages et les statistiques de trajet font partie de la sauvegarde système de Google et vous suivent sur un nouveau téléphone. <strong>Les lieux enregistrés — Domicile, Travail et destinations récentes — en sont délibérément exclus</strong> et ne quittent pas cet appareil.</p>
+
+    <h2>Base légale</h2>
+    <p>Le traitement repose sur l'article 6, paragraphe 1, point b du RGPD : il est nécessaire pour fournir la fonction que vous demandez en ouvrant l'application (carte, navigation). Pour les fonctions facultatives que vous activez par un interrupteur dans les Paramètres (radars, limitations de vitesse, sons d'alerte), la base est l'article 6, paragraphe 1, point a, votre consentement, révocable à tout moment en désactivant la fonction.</p>
+
+    <h2>Durée de conservation</h2>
+    <p>Les données vivent sur votre appareil tant que l'application est installée. La désinstaller, ou effacer ses données dans les réglages du système, les supprime définitivement. Le cache des radars écarte automatiquement les entrées de plus de 14 jours. Je ne peux en restaurer aucune — je n'en détiens pas de copie.</p>
+
+    <h2>Vos droits</h2>
+    <p>Vous disposez des droits d'accès, de rectification, d'effacement, de limitation du traitement, de portabilité et d'opposition. Toutes les données se trouvant uniquement sur votre appareil, vous exercez ces droits vous-même et immédiatement : en les consultant dans l'application, en supprimant les lieux enregistrés, en réinitialisant les statistiques ou en effaçant les données de l'application. Vous avez également le droit d'introduire une réclamation auprès de l'autorité de contrôle de votre pays de résidence — en France, la CNIL — ou de celle dont relève le responsable du traitement, en Pologne le Président de l'Office de protection des données personnelles (UODO).</p>
+
+    <h2>Enfants</h2>
+    <p>L'application s'adresse aux conducteurs et non aux enfants. Je ne collecte pas sciemment de données de personnes de moins de 16 ans.</p>
+
+    <h2>Modifications de cette politique</h2>
+    <p>En cas de modification, cette page sera mise à jour et la date en haut révisée. Les changements substantiels concernant ce qui est transmis seront décrits dans les notes de version sur Google Play.</p>
+
+    <h2>Contact</h2>
+    <p>Questions sur cette politique : <a href="mailto:j.pabich@gmail.com">j.pabich@gmail.com</a>.</p>
+  </section>
+
+  <section id="es" lang="es" hidden>
+    <p class="lede">GpsDash no tiene cuentas, no muestra publicidad, no recopila estadísticas de uso y no elabora perfiles de nadie. La gran mayoría de los datos nunca sale de tu teléfono. Este documento describe exactamente lo que sí sale — y adónde va.</p>
+
+    <div class="flag">
+      <span class="tag">Lo más importante</span>
+      <p>Por defecto, <strong>ninguna información sobre dónde estás sale de tu teléfono</strong> — salvo las peticiones de teselas, sin las cuales el mapa no llegaría a dibujarse. Las dos funciones que envían tus coordenadas a un tercero — límites de velocidad y radares — están <strong>desactivadas hasta que tú las actives</strong> en Ajustes. La tabla siguiente detalla exactamente qué envía cada una, y con qué frecuencia.</p>
+    </div>
+
+    <h2>Quién es el responsable</h2>
+    <p>El responsable del tratamiento de los datos personales tratados en relación con GpsDash es Jerzy Pabich, contacto: <a href="mailto:j.pabich@gmail.com">j.pabich@gmail.com</a>.</p>
+    <p>La aplicación no tiene servidor. No mantengo ninguna base de datos de usuarios ni tengo acceso a tu ubicación ni a información alguna sobre tus trayectos.</p>
+
+    <h2>Qué se queda en el dispositivo</h2>
+    <p>Lo siguiente se trata únicamente en local, en el teléfono, y no se transmite a ninguna parte:</p>
+    <ul>
+      <li>posición GPS, velocidad, rumbo y las aceleraciones derivadas del movimiento,</li>
+      <li>distancia diaria y del trayecto, velocidad media y máxima,</li>
+      <li>el tramo recién recorrido (unos 90 segundos, solo en memoria),</li>
+      <li>ajustes de la aplicación,</li>
+      <li>lugares guardados: Casa, Trabajo y destinos recientes,</li>
+      <li>la caché de radares y tramos de velocidad media descargados.</li>
+    </ul>
+    <p>La posición se lee del receptor GPS del propio dispositivo. La aplicación no usa los servicios de ubicación de Google ni la ubicación de red basada en bases de datos de operadores.</p>
+
+    <h2>Qué se envía, y a quién</h2>
+    <p>Para ofrecer el mapa, la navegación y los avisos, la aplicación consulta cinco servicios públicos gratuitos gestionados por otras organizaciones. Cada uno recibe los datos que se describen abajo y es respecto de ellos un <strong>responsable independiente</strong> — no me vincula con ninguno un contrato de encargo del tratamiento.</p>
+    <div class="tablewrap">
+      <table>
+        <tr><th>Servicio</th><th>Qué recibe</th><th>Cuándo</th></tr>
+        <tr><td class="host">OpenFreeMap<span>tiles.openfreemap.org</span></td><td>peticiones de teselas, que revelan la zona que estás viendo</td><td>mientras el mapa esté visible</td></tr>
+        <tr><td class="host">Overpass API<span>overpass-api.de<br>overpass.private.coffee</span></td><td>tus coordenadas</td><td>límites: cada ~800 m (desactivado por defecto)<br>radares y tramos: cada ~6 km (desactivado por defecto)</td></tr>
+        <tr><td class="host">Valhalla<span>valhalla1.openstreetmap.de<br>FOSSGIS e.V.</span></td><td>origen y destino de la ruta, idioma y unidades elegidos, el identificador de la app <code>gpsdash</code></td><td>al calcular y recalcular una ruta</td></tr>
+        <tr><td class="host">OSRM<span>router.project-osrm.org</span></td><td>origen y destino de la ruta</td><td>solo como alternativa, si Valhalla no responde</td></tr>
+        <tr><td class="host">Photon<span>photon.komoot.io<br>komoot GmbH</span></td><td>el texto de búsqueda que escribes y una posición aproximada, para que los resultados sean cercanos</td><td>al buscar un destino</td></tr>
+      </table>
+    </div>
+    <p>Ninguno de estos servicios recibe un identificador de dispositivo, un identificador publicitario, un número de teléfono, una dirección de correo ni nada que vincule una consulta con una persona concreta. Cada uno sí ve la dirección IP desde la que llega la petición, como en cualquier conexión a internet.</p>
+    <p>Sus propias políticas rigen lo que hacen con ello: <a href="https://openfreemap.org/">OpenFreeMap</a>, <a href="https://overpass-api.de/">Overpass</a>, <a href="https://valhalla.openstreetmap.de/">Valhalla / FOSSGIS</a>, <a href="https://project-osrm.org/">OSRM</a>, <a href="https://www.komoot.com/privacy">komoot / Photon</a>.</p>
+
+    <h2>Qué no hace la aplicación</h2>
+    <ul>
+      <li>no exige cuenta ni registro,</li>
+      <li>no muestra publicidad ni usa identificador publicitario,</li>
+      <li>no incluye herramientas de analítica ni de informes de fallos,</li>
+      <li>no elabora perfiles ni toma decisiones automatizadas,</li>
+      <li>no vende ni comparte datos con fines de marketing,</li>
+      <li>no guarda el historial de tus trayectos fuera de tu dispositivo.</li>
+    </ul>
+
+    <h2>Permisos y para qué sirven</h2>
+    <ul>
+      <li><strong>Ubicación (precisa)</strong> — la base de la aplicación: velocidad, distancia, posición en el mapa, avisos.</li>
+      <li><strong>Ubicación en segundo plano</strong> — para que los indicadores y la navegación sigan fluidos en la pantalla del coche en Android Auto con la pantalla del teléfono apagada. Sin ella, Android limita el GPS a un modo de bajo consumo.</li>
+      <li><strong>Notificaciones</strong> — la notificación permanente del servicio en primer plano que el sistema exige mientras se sigue la posición.</li>
+      <li><strong>Internet y estado de la red</strong> — descargar el mapa, las rutas y los datos de límites.</li>
+      <li><strong>Exención de optimización de batería</strong> (opcional, se pregunta una vez) — sin ella, una gestión de energía agresiva puede reducir la frecuencia de las posiciones GPS al conducir.</li>
+    </ul>
+
+    <h2>Copia de seguridad de Android</h2>
+    <p>Los ajustes y las estadísticas de trayecto se incluyen en la copia de seguridad del sistema de Google, de modo que te acompañan a un teléfono nuevo. <strong>Los lugares guardados — Casa, Trabajo y destinos recientes — están deliberadamente excluidos</strong> y permanecen solo en este dispositivo.</p>
+
+    <h2>Base jurídica</h2>
+    <p>El tratamiento se realiza al amparo del artículo 6.1.b del RGPD: es necesario para prestar la función que solicitas al abrir la aplicación (mapa, navegación). Para las funciones opcionales que activas con un interruptor en Ajustes (radares, límites de velocidad, sonidos de aviso), la base es el artículo 6.1.a, tu consentimiento, revocable en cualquier momento desactivando la función.</p>
+
+    <h2>Cuánto tiempo se conservan los datos</h2>
+    <p>Los datos viven en tu dispositivo mientras la aplicación esté instalada. Desinstalarla, o borrar sus datos en los ajustes del sistema, los elimina de forma definitiva. La caché de radares descarta automáticamente las entradas de más de 14 días. No puedo recuperar ninguno — no conservo copia.</p>
+
+    <h2>Tus derechos</h2>
+    <p>Tienes derecho de acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición. Como todos los datos residen únicamente en tu dispositivo, ejerces estos derechos por ti mismo y de inmediato: consultándolos en la aplicación, borrando los lugares guardados, reiniciando las estadísticas o borrando los datos de la aplicación. También tienes derecho a presentar una reclamación ante la autoridad de control de tu país de residencia — en España, la Agencia Española de Protección de Datos — o ante la competente para el responsable, en Polonia el Presidente de la Oficina de Protección de Datos Personales (UODO).</p>
+
+    <h2>Menores</h2>
+    <p>La aplicación está destinada a quienes conducen y no se dirige a menores. No recojo conscientemente datos de personas menores de 16 años.</p>
+
+    <h2>Cambios en esta política</h2>
+    <p>Si algo cambia, esta página se actualizará y se revisará la fecha de arriba. Los cambios sustanciales en lo que se transmite se describirán en las notas de la versión en Google Play.</p>
+
+    <h2>Contacto</h2>
+    <p>Preguntas sobre esta política: <a href="mailto:j.pabich@gmail.com">j.pabich@gmail.com</a>.</p>
+  </section>
+
+  <footer>
+    <p>GpsDash · dev.pabich.gpsdash · <span id="ver">version 0.35.0</span></p>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var STR = {
+      en: { title: 'Privacy Policy', date: 'In force from 29 August 2026 · applies to version 0.35.0 and later', ver: 'version 0.35.0' },
+      pl: { title: 'Polityka prywatności', date: 'Obowiązuje od 29 sierpnia 2026 · dotyczy wersji 0.35.0 i nowszych', ver: 'wersja 0.35.0' },
+      de: { title: 'Datenschutzerklärung', date: 'Gültig ab 29. August 2026 · gilt für Version 0.35.0 und neuer', ver: 'Version 0.35.0' },
+      it: { title: 'Informativa sulla privacy', date: 'In vigore dal 29 agosto 2026 · si applica alla versione 0.35.0 e successive', ver: 'versione 0.35.0' },
+      fr: { title: 'Politique de confidentialité', date: 'En vigueur depuis le 29 août 2026 · s’applique à la version 0.35.0 et suivantes', ver: 'version 0.35.0' },
+      es: { title: 'Política de privacidad', date: 'En vigor desde el 29 de agosto de 2026 · se aplica a la versión 0.35.0 y posteriores', ver: 'versión 0.35.0' }
+    };
+    var buttons = document.querySelectorAll('.langbar button');
+    var title = document.getElementById('title');
+    var dateline = document.getElementById('dateline');
+    var ver = document.getElementById('ver');
+
+    function show(lang) {
+      Object.keys(STR).forEach(function (code) {
+        var el = document.getElementById(code);
+        if (el) el.hidden = code !== lang;
+      });
+      var s = STR[lang];
+      title.textContent = s.title;
+      dateline.textContent = s.date;
+      ver.textContent = s.ver;
+      document.documentElement.lang = lang;
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
+      });
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { show(b.dataset.lang); });
+    });
+    show('en');
+  })();
+</script>
